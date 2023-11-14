@@ -1,0 +1,8 @@
+{% for recette in recettes %}
+    <h2>{{ recette.getName() }}</h2>
+    <ul>
+        {% for ingredient in recette.getIngredients() %}
+            <li>{{ ingredient.getName() }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}

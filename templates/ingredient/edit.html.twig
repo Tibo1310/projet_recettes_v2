@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un Ingrédient{% endblock %}
+
+{% block body %}
+<style>
+    *, html {
+        margin: 0;
+        padding: 0;
+    }
+    body  {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .example-wrapper {
+
+        font: 18px/1.5 sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    td, th, h1 {
+        text-align: center;
+    }
+    header {
+        background-color: black;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content :center;
+        width: 100%;
+    }
+    header > h1{
+    text-align: center;
+    background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000);
+    background-size: 400%;
+    font-size: 3.2rem;
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    word-spacing: 0.1rem;
+    -webkit-text-fill-color: transparent;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+    /* Styles pour les boutons */
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 10px 0 30px 0;
+    }
+
+    /* Style pour le bouton "Créer un Ingrédient" */
+    .btn-primary {
+        background-color: black;
+        color: white;
+        width: 300px;
+        margin: 0;
+    }
+
+    /* Au survol des boutons */
+    .btn:hover {
+        opacity: 0.8;
+    }
+
+    footer {
+        background-color: black;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+    }
+
+    footer p {
+        color: white;
+        font-family: sans-serif;
+    }
+
+    table {
+          border-collapse: collapse;
+    }
+    tr {
+        border: 3px solid black;
+    }
+    th {
+        border: 3px solid black;
+        background-color: #c0c0c0;
+    }
+    .btn {
+        margin-top: 25px;
+    }
+    .bg1 {
+        background-color: #dbdbdb;
+    }
+    .bg2 {
+        background-color: #f2f2f2;
+    }
+    .bg3 {
+        background-color: #e2e2e2;
+    }
+    .bg4 {
+        background-color: #d8d8d8;
+    }
+    .action {
+        background-color: skyblue;
+    }
+    #ingredient {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .row {
+        text-align: center;
+        font-size: 1.5em;
+        gap: 50px;
+    }
+    .form {
+        margin-top: 100px;
+    }
+    .form-control {
+        width: 275px;
+        border: 3px solid black;
+        padding: 10px;
+    }
+</style>
+
+<div class="example-wrapper edit-page">
+    <header>
+        <h1>Modifier un Ingrédient</h1>
+    </header>
+
+    <div class="form">
+        {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+
+        {{ form_end(edit_form) }}
+    </div>
+
+</div>
+
+<footer>
+    <p>Créé par Thibault Delattre</p>
+</footer>
+{% endblock %}

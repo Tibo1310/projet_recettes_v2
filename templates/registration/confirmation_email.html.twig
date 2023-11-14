@@ -1,0 +1,20 @@
+{# templates/registration/confirmation_email.html.twig #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Confirmation Email</title>
+    </head>
+    <body>
+
+        <h1>Hi! Please confirm your email!</h1>
+        <p>Please confirm your email address by clicking the following link :</p>
+
+        <p><a href="{{ signedUrl }}">Confirm my Email</a></p>
+
+        <p>If you did not register at our website, you can ignore this email.</p>
+
+        <p>Best regards,<br> Your Website Team</p>
+    </body>
+</html>

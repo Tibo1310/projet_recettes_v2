@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Supprimer un Ingrédient{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1>Supprimer un Ingrédient</h1>
+    <p>Êtes-vous sûr de vouloir supprimer cet ingrédient ?</p>
+
+    <a href="{{ path('ingredient.delete', {'id': ingredient.id}) }}" class="btn btn-danger">Oui, supprimer</a>
+    <a href="{{ path('app_ingredient') }}" class="btn btn-secondary">Annuler</a>
+</div>
+{% endblock %}

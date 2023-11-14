@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Recettes</h1>
+    {% for recette in recettes %}
+        <h2>{{ recette.getName() }}</h2>
+            {% for ingredient in recette.getIngredients() %}
+                <li>{{ ingredient.getName() }}</li>
+            {% endfor %}
+        <ul>
+                <li>Temps: {{ recette.getTemps() }}</li>
+                <li>Description: {{ recette.getDescription() }}</li>
+                <li>Difficulté: {{ recette.getDifficulte() }}</li>
+                <li>Prix: {{ recette.getPrix() }}</li>
+                <li>Créé le: {{ recette.getCreatedAt()|date("Y-m-d H:i") }}</li>
+                <li>Mis à jour le: {{ recette.getUpdatedAt()|date("Y-m-d H:i") }}</li>
+                <li>Ingrédients:</li>
+                <ul>
+            </ul>
+        </ul>
+    {% endfor %}
+{% endblock %}
